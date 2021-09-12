@@ -26,11 +26,8 @@ def select(A, j):
     elif x > j:
         return select(B, j)
     return select(C, j-x)
-   
 
-for i in range(2, 200):
-    lin_a = [x for x in range(1, i)]
-    
-    print(lin_a[len(lin_a) // 2], end=", ")
-    test = select(lin_a, len(lin_a) // 2)
-    print(test)
+
+if __name__ == "__main__":
+    arr = [x for x in range(1, 99999)]
+    print(arr, select(arr, len(arr)//2))
