@@ -1,4 +1,4 @@
-from linear_median import select
+import random
 
 def partition(A, p):
     B, C = [], []
@@ -13,7 +13,7 @@ def partition(A, p):
 def quicksort(A):
     if len(A) <= 1:
         return A
-    p = select(A, len(A) // 2)
+    p = A[random.randint(0, len(A)-1)]
     
     B, C = partition(A, p)
     left = quicksort(B)
@@ -21,4 +21,4 @@ def quicksort(A):
     return left + right
 
 if __name__ == '__main__':
-    quicksort([x for x in range(100_000, 1, -1)])
+    quicksort([x for x in range(100_000, 0, -1)])
