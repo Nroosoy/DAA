@@ -5,7 +5,6 @@ def max_sub(A):
     curr_start = 0
     max_here = 0
     for (i, v) in enumerate(A):
-        print(max_here, i, max)
         max_here += v
         if max < max_here:
             max = max_here
@@ -17,5 +16,3 @@ def max_sub(A):
             curr_start = i+1
     return [max_start, max_end, max]
 
-
-print(max_sub([1, 2, 3, -8, 4, 3, -1, 2]))
